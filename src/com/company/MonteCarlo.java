@@ -34,6 +34,6 @@ public abstract class MonteCarlo {
             i = n+1;
             n *= 1.2;
         } while (e > eg);
-        return new double[]{s*(xmax - xmin)*(ymax - ymin), cx/k, cy/k};
+        return new double[]{s*(xmax - xmin)*(ymax - ymin), cx/k, cy/k, i};
     }
 }
