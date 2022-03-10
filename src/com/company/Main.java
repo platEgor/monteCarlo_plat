@@ -12,7 +12,7 @@ public class Main {
         long t = new Date().getTime();
 
         long n = (long) pow(10, 4);
-        double e = pow(10, -6);
+        double e = pow(10, -4);
 
         MonteCarlo mc1 = new MonteCarlo(0, 0, a/2, a/2){
             @Override
@@ -24,7 +24,7 @@ public class Main {
             public boolean belong(double xp, double yp){return Main.belong2(xp, yp);}
         };
 
-        MonteCarlo mc3 = new MonteCarlo(0, a*(1-sqrt(3)/2), a/2, a/2){
+        MonteCarlo mc3 = new MonteCarlo(a*(1-sqrt(3)/2), a*(1-sqrt(3)/2), a/2, a/2){
             @Override
             public boolean belong(double xp, double yp){return Main.belong3(xp, yp);}
         };
